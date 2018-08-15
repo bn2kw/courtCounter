@@ -13,6 +13,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null){
+            scoreTeamA = savedInstanceState.getInt("TeamA");
+            displayForTeamA(scoreTeamA);
+            scoreTeamB = savedInstanceState.getInt("TeamB");
+            displayForTeamB(scoreTeamB);
+        }
     }
 
     public void displayForTeamA(int score) {
@@ -63,5 +70,18 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("TeamA", scoreTeamA);
+        outState.putInt("TeamB", scoreTeamB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }
