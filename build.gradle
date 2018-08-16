@@ -12,6 +12,8 @@ buildscript {
     }
 }
 
+test { useTestNG() }
+
 allprojects {
     repositories {
         jcenter()
