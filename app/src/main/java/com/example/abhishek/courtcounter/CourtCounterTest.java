@@ -33,7 +33,7 @@ public class CourtCounterTest {
   capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
 
   // Set android VERSION desired capability. Set your mobile device's OS version.
-  capabilities.setCapability(CapabilityType.VERSION, "5.0.1");
+  capabilities.setCapability(CapabilityType.VERSION, "5.1");
 
   // Set android platformName desired capability. It's Android in our case here.
   capabilities.setCapability("platformName", "Android");
