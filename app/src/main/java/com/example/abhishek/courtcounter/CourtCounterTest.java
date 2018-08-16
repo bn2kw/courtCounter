@@ -62,10 +62,22 @@ public class CourtCounterTest {
   
  
   // Click on DELETE/CLR button to clear result text box before running test.
-  driver.findElements(By.xpath("//android.widget.Button")).get(0).click();
+  //driver.findElements(By.xpath("//android.widget.Button")).get(0).click();
 
   // Click on number 2 button.
-  driver.findElement(By.name("7")).click();
+  driver.findElement(By.name("PlusthreeTeamA")).click();
+  
+  driver.findElement(By.name("PlustwoTeamA")).click();
+  
+  driver.findElement(By.name("FreeThrowTeamB")).click();
+  
+  String result_A = driver.findElement(By.name("team_a_score")).getText();
+  
+  String result_B = driver.findElement(By.name("team_b_score")).getText();
+  
+  System.out.println("TEAM A result is : " + result_A);
+  
+  System.out.println("TEAM B result is : " + result_B);
 
  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS); 
 }
