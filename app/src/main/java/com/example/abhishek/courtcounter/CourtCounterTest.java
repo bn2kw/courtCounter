@@ -44,7 +44,7 @@ public class CourtCounterTest {
   // Set android appActivity desired capability. It is
   // com.android.calculator2.Calculator for calculator application.
   // Set your application's appPackage if you are using any other app.
-  capabilities.setCapability("appActivity", "com.example.abhishek.courtcounter.");
+  capabilities.setCapability("appActivity", "com.example.abhishek.courtcounter.MainActivity");
 
   // Created object of RemoteWebDriver will all set capabilities.
   // Set appium server address and port number in URL string.
