@@ -41,6 +41,7 @@
                 />
 
             <Button
+                android:id="@+id/PlusthreeTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -50,6 +51,7 @@
                 android:text="+3 POINTS" />
 
             <Button
+                android:id="@+id/PlustwoTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -59,6 +61,7 @@
                 android:text="+2 POINTS" />
 
             <Button
+                android:id="@+id/FreeThrowTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -101,6 +104,7 @@
                 />
 
             <Button
+                android:id="@+id/PlusthreeTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -110,6 +114,7 @@
                 android:text="+3 POINTS" />
 
             <Button
+                android:id="@+id/PlustwoTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -119,6 +124,7 @@
                 android:text="+2 POINTS" />
 
             <Button
+                android:id="@+id/FreeThrowTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
