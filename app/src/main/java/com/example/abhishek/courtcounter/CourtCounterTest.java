@@ -51,7 +51,7 @@ public class CourtCounterTest {
   // Created object of RemoteWebDriver will all set capabilities.
   // Set appium server address and port number in URL string.
   // It will launch calculator app in android device.
-  driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+  driver = new RemoteWebDriver(new URL("http://http://172.31.22.58:4723/wd/hub"), capabilities);
   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
   
   
