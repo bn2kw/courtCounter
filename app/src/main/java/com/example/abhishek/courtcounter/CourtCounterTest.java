@@ -25,13 +25,13 @@ public class CourtCounterTest {
   DesiredCapabilities capabilities = new DesiredCapabilities();
 
   // Set android deviceName desired capability. Set your device name.
-  capabilities.setCapability("deviceName", "XT1562");
+  capabilities.setCapability("deviceName", "Android Emulator");
 
   // Set BROWSER_NAME desired capability. It's Android in our case here.
   capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
 
   // Set android VERSION desired capability. Set your mobile device's OS version.
-  capabilities.setCapability(CapabilityType.VERSION, "6.0.1");
+  capabilities.setCapability(CapabilityType.VERSION, "5.0.1");
 
   // Set android platformName desired capability. It's Android in our case here.
   capabilities.setCapability("platformName", "Android");
