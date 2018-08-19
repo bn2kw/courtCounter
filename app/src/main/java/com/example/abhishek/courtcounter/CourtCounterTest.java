@@ -7,16 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
-import java.net.MalformedURLException;
-import org.junit.After;
-import org.junit.Before;
 
 public class CourtCounterTest {
 
  WebDriver driver;
 
- @Before
- public void setUp() throws MalformedURLException {
+@Test
+ public void setUp() throws Exception {
   // Created object of DesiredCapabilities class.
   DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -48,13 +45,6 @@ public class CourtCounterTest {
   driver = new RemoteWebDriver(new URL("http://http://172.31.22.58:4723/wd/hub"), capabilities);
   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
   
-  
- }
-
- @Test
- public void testFirstCalculator() {
-  
- 
   // Click on DELETE/CLR button to clear result text box before running test.
   //driver.findElements(By.xpath("//android.widget.Button")).get(0).click();
 
@@ -74,12 +64,7 @@ public class CourtCounterTest {
   System.out.println("TEAM B result is : " + result_B);
 
  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS); 
-}
-
-@After
- public void End() {
+  
   driver.quit();
  }
 }
-
- 
