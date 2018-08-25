@@ -48,7 +48,7 @@ public class MainActivityTest {
     }
 
     private void press(int id){
-        onView(withId(id)).inRoot(isPlatformPopup()).perform(click());
+        onView(withId(id)).perform(click());
     }
 
     private void checkResult(String desired){
