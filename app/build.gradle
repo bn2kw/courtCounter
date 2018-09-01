@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: "jacoco"
+apply plugin: 'maven'
+apply plugin: 'distribution'
+
+
 
 android {
     compileSdkVersion 26
@@ -8,7 +12,7 @@ android {
         applicationId "com.example.abhishek.courtcounter"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
+        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 0
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
@@ -37,3 +41,34 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
+
+
+distributions {
+    main {
+        baseName = 'CourtCounter'
+        version = '1.0.'+ System.getenv("BUILD_NUMBER") as Integer ?: 0
+        contents {
+            from { 'build/outputs/apk/debug/app-debug.apk' }
+        }
+    }
+
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://18.188.138.157:8081/repository/android/") {
+                authentication(userName: nexusUsername, password: nexusPassword)
+            }
+        }
+    }
+}
+
+tasks.distTar.enabled = false
+
+configurations.archives.with {
+    artifacts.remove artifacts.find { it.archiveTask.is distTar }
+}
+
+
+
