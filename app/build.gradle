@@ -48,7 +48,7 @@ distributions {
         baseName = 'CourtCounter'
         version = '1.0.'+ code
         contents {
-            from { 'build/outputs/apk/debug/app-debug.apk' }
+            from { '/var/lib/jenkins/workspace/CourtCounter/app/build/outputs/apk/app-debug.apk' }
         }
     }
 
