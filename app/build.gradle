@@ -4,7 +4,7 @@ apply plugin: 'maven'
 apply plugin: 'distribution'
 
 
-
+def code = System.getenv("BUILD_NUMBER") as Integer ?: 0
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -46,7 +46,7 @@ dependencies {
 distributions {
     main {
         baseName = 'CourtCounter'
-        version = '1.0.'+ versionCode
+        version = '1.0.'+ code
         contents {
             from { 'build/outputs/apk/debug/app-debug.apk' }
         }
