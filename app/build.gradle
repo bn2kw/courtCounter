@@ -70,5 +70,15 @@ configurations.archives.with {
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
 }
 
+jacoco{
+    toolVersion = '0.8.2'
+}
 
+jacocoTestReport {
+    reports {
+        html.enabled = true
+        xml.enabled = true
+    }
+}
 
+test.finalizedBy jacocoTestReport 
