@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: "jacoco"
 apply plugin: 'maven'
 apply plugin: 'distribution'
-apply plugin: 'java'
 
 
 def code = System.getenv("BUILD_NUMBER") as Integer ?: 0
@@ -70,16 +69,3 @@ tasks.distTar.enabled = false
 configurations.archives.with {
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
 }
-
-jacoco{
-    toolVersion = '0.8.2'
-}
-
-jacocoTestReport {
-    reports {
-        html.enabled = true
-        xml.enabled = true
-    }
-}
-
-test.finalizedBy jacocoTestReport 
