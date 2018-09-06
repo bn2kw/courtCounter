@@ -29,6 +29,10 @@ android {
     }
 }
 
+plugins {
+    id "org.sonarqube" version "5.7"
+}
+
 repositories {
     mavenCentral()
 }
