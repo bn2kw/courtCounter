@@ -43,7 +43,7 @@ public class MainActivityTest {
     }
 
     private void press(int id){
-        onView(withId(id)).perform(scrollTo()).perform(click());
+        onView(withId(id)).perform(click());
     }
 
     private void checkResult(String desired){
