@@ -28,7 +28,7 @@ public class MainActivityTest {
     public final ActivityTestRule<MainActivity> activity = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Test
-    public void court()
+    public void court() {
         press(R.id.PlusthreeTeamA);
         press(R.id.PlustwoTeamA);
         checkResult("5");
