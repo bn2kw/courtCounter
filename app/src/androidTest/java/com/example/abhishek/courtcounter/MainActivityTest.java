@@ -39,7 +39,7 @@ public class MainActivityTest {
         activity.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         checkResult("5");
         checkResult1("4");
-        press(R.id.resetButton);
+        //press(R.id.resetButton);
     }
 
     private void press(int id){
