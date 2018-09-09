@@ -45,7 +45,8 @@ public class MainActivityTest {
     }
 
     private void press(int id){
-        onView(withId(id)).check(matches(isCompletelyDisplayed())).perform(click());
+        //onView(withId(id)).check(matches(isCompletelyDisplayed())).perform(click());
+        onData(withId(id)).perform(click());
     }
 
     private void checkResult(String desired){
