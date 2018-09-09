@@ -28,23 +28,17 @@ public class MainActivityTest {
     public final ActivityTestRule<MainActivity> activity = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Test
-    public void court(){
-        activity.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    public void court()
         press(R.id.PlusthreeTeamA);
         press(R.id.PlustwoTeamA);
         checkResult("5");
         press(R.id.PlusthreeTeamB);
         press(R.id.FreeThrowTeamB);
         checkResult1("4");
-        press(R.id.resetButton);
-        activity.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        press(R.id.PlusthreeTeamA);
-        press(R.id.PlustwoTeamA);
-        press(R.id.PlusthreeTeamA);
-        checkResult("8");
-        press(R.id.PlusthreeTeamB);
-        press(R.id.FreeThrowTeamB);
+        activity.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        checkResult("5");
         checkResult1("4");
+        press(R.id.resetButton);
     }
 
     private void press(int id){
