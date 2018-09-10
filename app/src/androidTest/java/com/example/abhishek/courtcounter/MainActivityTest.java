@@ -31,7 +31,8 @@ public class MainActivityTest {
     public final ActivityTestRule<MainActivity> activity = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Test
-    public void court() {
+    public void court() throws InterruptedException {
+        Thread.sleep(1000);
         press(R.id.PlusthreeTeamA);
         press(R.id.PlustwoTeamA);
         checkResult("5");
@@ -45,7 +46,12 @@ public class MainActivityTest {
     }
 
     private void press(int id){
-        onView(withId(id)).perform(click());
+        try {
+            Thread.sleep(1000);
+            onView(withId(id)).perform(click());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //onData(withId(id)).perform(click());
     }
 
