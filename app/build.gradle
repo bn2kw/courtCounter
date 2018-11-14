@@ -57,7 +57,7 @@ dependencies {
     androidTestCompile 'com.android.support.test:rules:1.0.2'
 }*/
 
-/*distributions {
+distributions {
     main {
         baseName = 'CourtCounter'
         version = '1.0.'+ code
@@ -84,4 +84,3 @@ configurations.archives.with {
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
 }
 
-*/
