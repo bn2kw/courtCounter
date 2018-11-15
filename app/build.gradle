@@ -81,7 +81,7 @@ uploadArchives {
 
 tasks.distTar.enabled = false
 
-configurations.archives.with {
+/*configurations.archives.with {
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
-}
+}*/
 
