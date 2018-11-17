@@ -72,7 +72,7 @@ distributions {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://52.77.252.80:8081/repository/android/") {
+            repository(url: "http://54.169.206.45:8081/repository/android/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
         }
@@ -85,3 +85,19 @@ tasks.distTar.enabled = false
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
 }*/
 
+sonarqube {
+    properties {
+        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-23/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
+        property "sonar.sources", "src/main/java"
+        property "sonar.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
+        property "sonar.libraries", libraries
+        property "sonar.tests", "src/androidTest/java"
+        property "sonar.java.test.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
+        property "sonar.java.test.libraries", libraries
+        property "sonar.jacoco.reportPaths", "build/jacoco/testDebugUnitTest.exec"
+        property "sonar.java.coveragePlugin", "jacoco"
+        //property "sonar.junit.reportsPaths", "build/test-results/debug"
+        property "sonar.android.lint.report", "build/outputs/lint-results"
+    }
+
+}
