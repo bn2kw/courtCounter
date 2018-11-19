@@ -117,7 +117,7 @@ sonarqube {
         property "sonar.tests", "src/androidTest/java"
         property "sonar.java.test.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
         property "sonar.java.test.libraries", libraries
-        property "sonar.jacoco.reportPaths", "build/jacoco/testDebugUnitTest.exec"
+        property "sonar.jacoco.reportPaths", "${project.buildDir}/jacoco/testDebugUnitTest.exec"
         property "sonar.java.coveragePlugin", "jacoco"
         //property "sonar.junit.reportsPaths", "build/test-results/debug"
         property "sonar.android.lint.report", "build/outputs/lint-results.xml"
