@@ -37,7 +37,7 @@ public class MainActivityTest {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
-    @UiThreadTest
+    /*@UiThreadTest
     @Before
     public void setUp() throws Exception {
         final Activity activity = mActivityRule.getActivity();
@@ -60,7 +60,7 @@ public class MainActivityTest {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-    }
+    }*/
 
     @Test
     public void court() throws InterruptedException {
