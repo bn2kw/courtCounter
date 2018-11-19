@@ -72,7 +72,7 @@ distributions {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://54.169.206.45:8081/repository/android/") {
+            repository(url: "http://svm2k202.mylabserver.com:8081/repository/android/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
         }
