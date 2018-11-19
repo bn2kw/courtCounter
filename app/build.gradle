@@ -104,7 +104,7 @@ task jacocoTestReport(type: JacocoReport, dependsOn: "connectedDebugAndroidTest"
                  '**/*$ViewInjector*.class'
       ])
   sourceDirectories = files(coverageSourceDirs)
-  executionData = files("$buildDir/jacoco/testDebug.exec")
+  executionData = files("/var/lib/jenkins/workspace/CourtCounter/app/build/outputs/code-coverage/connected/hudson_en-US_420_1080x1920_android-22_armeabi-v7a(AVD) - 5.1.1-coverage.ec")
   
   }
 
