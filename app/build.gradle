@@ -87,7 +87,7 @@ configurations.archives.with {
 
 sonarqube {
     properties {
-        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-23/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
+        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-22/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
         property "sonar.sources", "src/main/java"
         property "sonar.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
         property "sonar.libraries", libraries
