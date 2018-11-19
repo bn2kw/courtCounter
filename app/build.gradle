@@ -85,6 +85,13 @@ configurations.archives.with {
     artifacts.remove artifacts.find { it.archiveTask.is distTar }
 }
 
+jacocoTestReport {
+   reports {
+      xml.enabled = true
+      html.enabled = true
+   }
+}
+
 sonarqube {
     properties {
         def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-22/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
