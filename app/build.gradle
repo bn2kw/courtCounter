@@ -64,7 +64,7 @@ distributions {
         baseName = 'CourtCounter'
         version = '1.0.'+ code
         contents {
-            from { '/var/lib/jenkins/workspace/CourtCounter/app/build/outputs/apk/app-debug.apk' }
+            from { '/var/jenkins_home/workspace/CourtCounter/app/build/outputs/apk/app-debug.apk' }
         }
     }
 
@@ -105,7 +105,7 @@ task jacocoTestReport(type: JacocoReport, dependsOn: "connectedDebugAndroidTest"
                  '**/*$ViewInjector*.class'
       ])
   sourceDirectories = files(coverageSourceDirs)
-  executionData = files("/var/lib/jenkins/workspace/CourtCounter/app/build/outputs/code-coverage/connected/hudson_en-US_420_1080x1920_android-22_armeabi-v7a(AVD) - 5.1.1-coverage.ec")
+  executionData = files("/var/jenkins_home/workspace/CourtCounter/app/build/outputs/code-coverage/connected/hudson_en-US_420_1080x1920_android-22_armeabi-v7a(AVD) - 5.1.1-coverage.ec")
   
   }
 
@@ -113,15 +113,15 @@ sonarqube {
     properties {
         def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-22/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
         property "sonar.sources", "src/main/java"
-        property "sonar.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
+        property "sonar.binaries", "/var/jenkins_home/workspace/CourtCounter/app/build/intermediates/classes/debug"
         property "sonar.libraries", libraries
         property "sonar.tests", "src/androidTest/java"
-        property "sonar.java.test.binaries", "/var/lib/jenkins/workspace/CourtCounter/app/build/intermediates/classes/debug"
+        property "sonar.java.test.binaries", "/var/jenkins_home/workspace/CourtCounter/app/build/intermediates/classes/debug"
         property "sonar.java.test.libraries", libraries
-        property "sonar.jacoco.reportPaths", "/var/lib/jenkins/workspace/CourtCounter/app/build/outputs/code-coverage/connected/hudson_en-US_420_1080x1920_android-22_armeabi-v7a(AVD) - 5.1.1-coverage.ec"
+        property "sonar.jacoco.reportPaths", "/var/jenkins_home/workspace/CourtCounter/app/build/outputs/code-coverage/connected/hudson_en-US_420_1080x1920_android-22_armeabi-v7a(AVD) - 5.1.1-coverage.ec"
         property "sonar.java.coveragePlugin", "jacoco"
         //property "sonar.junit.reportsPaths", "build/test-results/debug"
-        property "sonar.android.lint.report", "/var/lib/jenkins/workspace/CourtCounter/app/build/reports/lint-results.xml"
+        property "sonar.android.lint.report", "/var/jenkins_home/workspace/CourtCounter/app/build/reports/lint-results.xml"
     }
 
 }
