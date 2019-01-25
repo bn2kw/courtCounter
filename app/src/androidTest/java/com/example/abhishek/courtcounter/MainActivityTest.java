@@ -74,9 +74,9 @@ public class MainActivityTest {
         press("Team B +2 POINTS");
         checkResult1("4");
         //press(R.id.resetButton);
-        mActivityRule.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        checkResult("5");
-        checkResult1("4");
+        //mActivityRule.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        //checkResult("5");
+        //checkResult1("4");
        /* press(R.id.PlusthreeTeamA);
         press(R.id.PlustwoTeamA);
         press(R.id.PlusthreeTeamA);
@@ -89,7 +89,7 @@ public class MainActivityTest {
     private void press(String id){
         try {
             Thread.sleep(1000);
-            onView(withText(containsString(id))).perform(scrollTo(),click());
+            onView(withText(id)).perform(scrollTo(),click());
             //onView(withText(containsString(id))).inRoot(isPlatformPopup()).perform(scrollTo(),click());
         } catch (InterruptedException e) {
             e.printStackTrace();
