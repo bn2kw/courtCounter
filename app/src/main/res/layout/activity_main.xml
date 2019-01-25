@@ -51,7 +51,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="plusThreeA"
-                android:text="+3 POINTS" />
+                android:text="Team A +3 POINTS" />
 
             <Button
                 android:id="@+id/PlustwoTeamA"
@@ -61,7 +61,7 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginLeft="24dp"
                 android:onClick="plusTwoA"
-                android:text="+2 POINTS" />
+                android:text="Team A +2 POINTS" />
 
             <Button
                 android:id="@+id/FreeThrowTeamA"
@@ -71,7 +71,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="freeThrowA"
-                android:text="FREE THROW" />
+                android:text="Team A FREE THROW" />
         </LinearLayout>
         <View
             android:layout_width="1dp"
@@ -114,7 +114,7 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginLeft="24dp"
                 android:onClick="plusThreeB"
-                android:text="+3 POINTS" />
+                android:text="Team B +3 POINTS" />
 
             <Button
                 android:id="@+id/PlustwoTeamB"
@@ -124,7 +124,7 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginLeft="24dp"
                 android:onClick="plusTwoB"
-                android:text="+2 POINTS" />
+                android:text="Team B +2 POINTS" />
 
             <Button
                 android:id="@+id/FreeThrowTeamB"
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="freeThrowB"
-                android:text="FREE THROW" />
+                android:text="Team B FREE THROW" />
         </LinearLayout>
     </LinearLayout>
     <Button
