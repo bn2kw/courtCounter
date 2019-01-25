@@ -88,7 +88,8 @@ public class MainActivityTest {
     private void press(int id){
         try {
             Thread.sleep(1000);
-            onView(withId(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
+            //onView(withId(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
+            onView(withText(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
         } catch (InterruptedException e) {
             e.printStackTrace();
 
