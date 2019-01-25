@@ -85,7 +85,7 @@ public class MainActivityTest {
         checkResult1("8");*/
     }
 
-    private void press(int id){
+    private void press(String id){
         try {
             Thread.sleep(1000);
             //onView(withId(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
