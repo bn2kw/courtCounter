@@ -66,11 +66,11 @@ public class MainActivityTest {
     @Test
     public void court() throws InterruptedException {
         Thread.sleep(1000);
-        press(R.id.PlusthreeTeamA);
-        press(R.id.PlustwoTeamA);
+        press("Team A +3 POINTS");
+        press("Team A +2 POINTS");
         checkResult("5");
-        press(R.id.PlusthreeTeamB);
-        press(R.id.FreeThrowTeamB);
+        press("Team B +2 POINTS");
+        press("Team B +2 POINTS");
         checkResult1("4");
         //press(R.id.resetButton);
         mActivityRule.getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -88,7 +88,7 @@ public class MainActivityTest {
     private void press(int id){
         try {
             Thread.sleep(1000);
-            onView(withId(id)).perform(scrollTo(),click());
+            onView(withId(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
         } catch (InterruptedException e) {
             e.printStackTrace();
 
