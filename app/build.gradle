@@ -73,7 +73,7 @@ distributions {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://ec2-18-222-75-220.us-east-2.compute.amazonaws.com:8081/repository/android/") {
+            repository(url: "http://192.168.50.38:8081/repository/android/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
         }
