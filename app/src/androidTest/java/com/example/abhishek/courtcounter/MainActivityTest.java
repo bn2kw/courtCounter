@@ -39,7 +39,7 @@ public class MainActivityTest {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
-    /*@UiThreadTest
+    @UiThreadTest
     @Before
     public void setUp() throws Exception {
         final Activity activity = mActivityRule.getActivity();
@@ -62,7 +62,7 @@ public class MainActivityTest {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-    }*/
+    }
 
     @Test
     public void court() throws InterruptedException {
@@ -89,8 +89,8 @@ public class MainActivityTest {
     private void press(String id){
         try {
             Thread.sleep(1000);
-            //onView(withId(id)).inRoot(isPlatformPopup()).perform(scrollTo(),click());
-            onView(withText(containsString(id))).inRoot(isPlatformPopup()).perform(scrollTo(),click());
+            onView(withId(id)).perform(scrollTo(),click());
+            //onView(withText(containsString(id))).inRoot(isPlatformPopup()).perform(scrollTo(),click());
         } catch (InterruptedException e) {
             e.printStackTrace();
 
