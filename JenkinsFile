@@ -1,0 +1,45 @@
+pipeline{
+  
+  agent any
+    
+    stages{
+  stage('Build'){
+    steps{
+        sh ./gradlew clean build
+    }
+  }
+  stages('Artifact'){
+    steps {
+      nexusArtifactUploader {
+        nexusVersion('nexus3')
+        protocol('http')
+        nexusUrl('192.168.50.38:8081')
+        groupId('CourtCounter')
+        version('1.0.$BUILD_NUMBER')
+        repository('android')
+        credentialsId('nexus_cred')
+        artifact {
+            artifactId('CourtCounter')
+            type('apk')
+            classifier('debug')
+            file('$WORKSPACE/app/build/outputs/apk/app-debug.apk')
+        }
+        artifact {
+            artifactId('CourtCounter')
+            type('zip')
+            classifier('debug')
+            file('$WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip')
+        }
+      }
+    }
+  }
+  stage('Scan') {
+            steps {
+                def scannerHome = tool 'SonarQube Scanner'
+                withSonarQubeEnv('SonarQube') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+            }
+        }
+  }
+}
