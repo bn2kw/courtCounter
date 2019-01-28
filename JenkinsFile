@@ -22,7 +22,7 @@ pipeline{
         {artifactId: CourtCounter,
          classifier: 'debug',
          file: $WORKSPACE/app/build/outputs/apk/app-debug.apk,
-         type: 'apk'},
+         type: 'apk'}
          {artifactId: CourtCounter,
          classifier: 'debug',
          file: $WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip,
