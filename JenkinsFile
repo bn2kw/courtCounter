@@ -18,16 +18,16 @@ pipeline{
     version: 1.0.$BUILD_NUMBER,
     repository: 'android',
     credentialsId: 'nexus_cred',
-    artifacts: [
-        [artifactId: CourtCounter,
+    artifacts: {
+        {artifactId: CourtCounter,
          classifier: 'debug',
          file: $WORKSPACE/app/build/outputs/apk/app-debug.apk,
-         type: 'apk'],
-         [artifactId: CourtCounter,
+         type: 'apk'},
+         {artifactId: CourtCounter,
          classifier: 'debug',
          file: $WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip,
-         type: 'zip']
-    ]
+         type: 'zip'}
+    }
  
       }
     }
