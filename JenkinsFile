@@ -8,7 +8,7 @@ pipeline{
         sh ./gradlew clean build
     }
   }
-  stages('Artifact'){
+  stage('Artifact'){
     steps {
       nexusArtifactUploader {
         nexusVersion('nexus3')
