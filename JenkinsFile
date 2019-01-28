@@ -10,7 +10,7 @@ pipeline{
   }
   stage('Artifact'){
     steps {
-      nexusArtifactUploader(
+      nexusArtifactUploader
     nexusVersion: 'nexus3',
     protocol: 'http',
     nexusUrl: '192.168.50.38:8081',
@@ -28,7 +28,7 @@ pipeline{
          file: $WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip,
          type: 'zip']
     ]
- )
+ 
       }
     }
   stage('Scan') {
