@@ -22,14 +22,12 @@ pipeline{
             artifactId('CourtCounter')
             type('apk')
             classifier('debug')
-            file('$WORKSPACE/app/build/outputs/apk/app-debug.apk')
-        }
+            file('$WORKSPACE/app/build/outputs/apk/app-debug.apk')}
         artifact {
             artifactId('CourtCounter')
             type('zip')
             classifier('debug')
-            file('$WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip')
-        }
+            file('$WORKSPACE/app/build/distributions/CourtCounter-1.0.$BUILD_NUMBER.zip')}
       }
     }
   }
