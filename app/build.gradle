@@ -15,7 +15,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode System.getenv("BUILD_NUMBER") as Integer ?: 0
-        versionName "1.0"
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -62,7 +62,7 @@ dependencies {
 distributions {
     main {
         baseName = 'CourtCounter'
-        version = '1.0.'+ code
+        version = '2.0.'+ code
         contents {
             from { '/var/jenkins_home/workspace/CourtCounter/app/build/outputs/apk/app-debug.apk' }
         }
