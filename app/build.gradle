@@ -26,7 +26,18 @@ playAccountConfigs {
         versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
+    
+    signingConfigs {
+        release {
+            storeFile file("someDirectory/my_keystore.jks")
+            storePassword "my_store_pass_here"
+            keyAlias "my_key_alias_here"
+            keyPassword "my_key_pass_here"
+        }
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
