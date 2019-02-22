@@ -31,15 +31,15 @@ playAccountConfigs {
     
     signingConfigs {
         release {
-            storeFile file("someDirectory/my_keystore.jks")
-            storePassword "my_store_pass_here"
-            keyAlias "my_key_alias_here"
-            keyPassword "my_key_pass_here"
+            storeFile file("release.keystore")
+            storePassword "Cloudaeon@2020"
+            keyPassword "Cloudaeon@2020"
         }
     }
     
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -48,6 +48,10 @@ playAccountConfigs {
             testCoverageEnabled  true
         }
     }
+}
+
+play {
+    track = 'alpha'
 }
 
 
