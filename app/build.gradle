@@ -4,10 +4,18 @@ apply plugin: "jacoco"
 apply plugin: 'maven'
 apply plugin: 'distribution'
 apply plugin: "org.sonarqube"
+apply plugin: 'com.github.triplet.play'
 
 
 def code = System.getenv("BUILD_NUMBER") as Integer ?: 0
 android {
+
+playAccountConfigs {
+        defaultAccountConfig {
+            serviceAccountEmail = "svm2k20@gmail.com"
+            jsonFile = file("someDirectory/my_json_key.json")
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
