@@ -13,7 +13,7 @@ android {
 playAccountConfigs {
         defaultAccountConfig {
             serviceAccountEmail = "svm2k20@gmail.com"
-            jsonFile = file("someDirectory/my_json_key.json")
+            jsonFile = file("/api-8324249604290713559-111702-2968b6cfa996.json")
         }
     }
     compileSdkVersion 26
