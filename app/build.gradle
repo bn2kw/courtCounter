@@ -13,7 +13,7 @@ android {
 playAccountConfigs {
         defaultAccountConfig {
             serviceAccountEmail = "svm2k20@gmail.com"
-            jsonFile = file("./api-8324249604290713559-111702-2968b6cfa996.json")
+            jsonFile = file("../api-8324249604290713559-111702-2968b6cfa996.json")
         }
     }
     compileSdkVersion 26
@@ -31,7 +31,7 @@ playAccountConfigs {
     
     signingConfigs {
         release {
-            storeFile file("./release.keystore")
+            storeFile file("../release.keystore")
             storePassword "Cloudaeon@2020"
             keyPassword "Cloudaeon@2020"
         }
@@ -53,7 +53,7 @@ playAccountConfigs {
 play {
     track = 'alpha'
     serviceAccountEmail = "svm2k20@gmail.com"
-    pk12File = file('./release.p12')
+    pk12File = file('../release.p12')
 }
 
 
