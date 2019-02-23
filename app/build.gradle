@@ -52,6 +52,8 @@ playAccountConfigs {
 
 play {
     track = 'alpha'
+    serviceAccountEmail = "svm2k20@gmail.com"
+    pk12File = file('./release.p12')
 }
 
 
