@@ -33,6 +33,7 @@ playAccountConfigs {
         release {
             storeFile file("../release.keystore")
             storePassword "Cloudaeon@2020"
+            keyAlias "Cloudaeon"
             keyPassword "Cloudaeon@2020"
         }
     }
